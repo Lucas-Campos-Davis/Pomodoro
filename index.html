@@ -2,29 +2,39 @@
 
     <head>
         <meta charset="utf-8" />
-        <title>POMODORO</title>
+        <title>Pomodoro</title>
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Courier+Prime&family=Montserrat&display=swap" rel="stylesheet">
         <script type="text/javascript" src="index.js"></script>
         <script type="text/javascript" src="countdownTimer.js"></script>
     </head>
 
     <body>
+        <header>
+            <h1 class="site-title">Pomodoro</h1>
+        </header>
         <main class="container">
             <div id="timer"><span id="time"></span></div>
 
             <div id="buttons">
-            <button id="start">Start</button>
-            <button id="pause">Pause</button>
-            <button id="reset">Reset</button>
+                <button id="start">Start</button>
+                <button id="pause">Pause</button>
+                <button id="reset">Reset</button>
             </div>
 
             <div id="number-holders">
-            <label for="work-time">Work Time:</label>
-            <input id="work-time" type="number" min="1" value="25">
-            <label for="short-time">Short Break:</label>
-            <input id="short-time" type="number" min="1" value="5">
-            <label for="long-time">Long Break:</label>
-            <input id="long-time" type="number" min="1" value="15">
+                <div class="number-holder">
+                    <label for="work-time">Work Time</label>
+                    <input id="work-time" type="number" min="1" value="25">
+                </div>
+                <div class="number-holder">
+                    <label for="short-time">Short Break</label>
+                    <input id="short-time" type="number" min="1" value="5">
+                </div>
+                <div class="number-holder">
+                    <label for="long-time">Long Break</label>
+                    <input id="long-time" type="number" min="1" value="15">
+                </div>
             </div>
         </main>
     </body>
