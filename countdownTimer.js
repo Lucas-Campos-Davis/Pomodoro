@@ -1,4 +1,4 @@
-function CountDownTimer(duration, granularity) {
+function CountDownTimer(duration, elem, event, granularity) {
     this.duration = duration;
     this.granularity = granularity || 1000;
     this.tickFuncs = [];
@@ -6,6 +6,8 @@ function CountDownTimer(duration, granularity) {
     this.timerId = 0;
     this.paused = false;
     this.currentTime = 0;
+    this.elem = elem;
+    this.event = event;
 }
 
 CountDownTimer.prototype.start = function () {
@@ -17,7 +19,7 @@ CountDownTimer.prototype.start = function () {
     var current = this.duration;
     let funcs = this.tickFuncs;
     var that = this;
-    if(this.paused){
+    if (this.paused) {
         this.paused = false;
         current = this.currentTime;
     }
@@ -30,6 +32,7 @@ CountDownTimer.prototype.start = function () {
         if (current <= 0) {
             that.running = false;
             clearInterval(timerId);
+            that.elem.dispatchEvent(that.event);
         }
         current--;
         that.currentTime = current;
@@ -41,7 +44,7 @@ CountDownTimer.prototype.start = function () {
 };
 
 CountDownTimer.prototype.pause = function () {
-    if(!this.running){
+    if (!this.running) {
         return;
     }
     this.running = false;
@@ -71,7 +74,7 @@ CountDownTimer.prototype.onTick = function (ftn) {
 };
 
 CountDownTimer.prototype.expired = function () {
-    return !this.running;
+    return !this.running && !this.paused;
 };
 
 CountDownTimer.parse = function (seconds) {

@@ -1,0 +1,14 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    flex: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+#timer{
+    border: 1px solid #000000;
+}
+#time{
+    font-size: 150px;
+}

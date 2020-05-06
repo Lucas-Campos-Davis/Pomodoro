@@ -1,15 +1,32 @@
-<head>
-    <meta charset="utf-8" />
-    <title>POMODORO</title>
-    <link rel="stylesheet" type="text/css" href="style.css" />
-    <script type="text/javascript" src="index.js"></script>
-    <script type="text/javascript" src="countdownTimer.js"></script>
-</head>
+<html>
 
-<body>
-    <button id="start">Start</button>
-    <button id="pause">Pause</button>
-    <button id="reset">Reset</button>
-    <div><span id="time"></span></div>
-    <input id="minutes" type="number" min="1" value="25">
-</body>
+    <head>
+        <meta charset="utf-8" />
+        <title>POMODORO</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <script type="text/javascript" src="index.js"></script>
+        <script type="text/javascript" src="countdownTimer.js"></script>
+    </head>
+
+    <body>
+        <main class="container">
+            <div id="timer"><span id="time"></span></div>
+
+            <div id="buttons">
+            <button id="start">Start</button>
+            <button id="pause">Pause</button>
+            <button id="reset">Reset</button>
+            </div>
+
+            <div id="number-holders">
+            <label for="work-time">Work Time:</label>
+            <input id="work-time" type="number" min="1" value="25">
+            <label for="short-time">Short Break:</label>
+            <input id="short-time" type="number" min="1" value="5">
+            <label for="long-time">Long Break:</label>
+            <input id="long-time" type="number" min="1" value="15">
+            </div>
+        </main>
+    </body>
+
+</html>
