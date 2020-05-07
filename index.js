@@ -8,8 +8,8 @@ window.onload = function () {
         pomTime = true,
         blinkOn = false,
         blinkInterval = false,
-        timer = new CountDownTimer(5, display, event), //change to 25 * 60
-        timeObj = CountDownTimer.parse(5);
+        timer = new CountDownTimer(25*60, display, event), //change to 25 * 60
+        timeObj = CountDownTimer.parse(25*60);
 
     format(timeObj.minutes, timeObj.seconds);
 
