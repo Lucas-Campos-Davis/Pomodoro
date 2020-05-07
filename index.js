@@ -17,10 +17,10 @@ window.onload = function () {
 
     document.querySelector('#start').addEventListener('click', function () {
         if (pomTime) {
-            seconds = 5;//document.querySelector('#work-time').value * 60;
+            seconds = document.querySelector('#work-time').value * 60;
         }
         else if (shortRest) {
-            seconds = 1;//document.querySelector('#short-time').value * 60;
+            seconds = document.querySelector('#short-time').value * 60;
         }
         else if (longRest) {
             seconds = document.querySelector('#long-time').value * 60;
@@ -33,10 +33,10 @@ window.onload = function () {
     });
     document.querySelector('#reset').addEventListener('click', function () {
         if (pomTime) {
-            seconds = 5;//document.querySelector('#work-time').value * 60;
+            seconds = document.querySelector('#work-time').value * 60;
         }
         else if (shortRest) {
-            seconds = 1;////document.querySelector('#short-time').value * 60;
+            seconds = document.querySelector('#short-time').value * 60;
         }
         else if (longRest) {
             seconds = document.querySelector('#long-time').value * 60;
